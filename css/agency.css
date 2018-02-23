@@ -4,6 +4,101 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 
+ .mySlides {display:none}
+ .w3-left, .w3-right, .w3-badge {cursor:pointer}
+ .w3-badge {height:13px;width:13px;padding:0}
+
+
+.nav-btn-container {
+  text-align: center;
+}
+.slide-container {
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  /* border: 2px solid black; */
+}
+
+
+.item-img {
+  max-height: 500px;
+  max-width: 500px;
+  height: auto;
+  width: auto;
+  display: block;
+  /* position: absolute; */
+  /* border: 2px solid pink; */
+  left: 0;
+}
+
+
+.item-description {
+  font-size: 10pt;
+  display: inline-block;
+  /* position: absolute; */
+  margin-left: 7%;
+  position: relative;
+  /* border: 2px solid red;
+  background-color: white; */
+  max-width: 500px;
+  min-width: 388px;
+  width: 550px;
+  right: 0;
+}
+.item-title {
+  margin-top: 36px;
+  margin-bottom: 24px;
+  vertical-align: top;
+}
+
+ .big-space {
+   height: 60px;
+ }
+
+.custom-button-row {
+  margin-top: 30%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.custom-btn {
+  display: inline-flex;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0;
+}
+
+.custom-btn:hover {
+  color: white;
+  background-color: black;
+}
+
+.panel-2-description {
+  font-size: calc(12pt + 3vw);
+}
+
+.carousel-control-prev {
+  left: -10px;
+  color: black;
+  z-index: 100;
+}
+
+.carousel-item img {
+  /*display: inline-flex;*/
+  /*border: 2px solid black;*/
+  position: relative;
+  margin-top: 30px;
+  vertical-align: top;
+}
+
+
 
 .page-border {
   border: 16px gold solid;
@@ -15,6 +110,12 @@
   pointer-events: none;
 }
 
+@media (max-width: 400px) {
+  .page-border {
+    border: 8px gold solid;
+  }
+}
+
 body {
   /*put menstrual pattern*/
   background-image: url("../img/pattern.png");
@@ -24,47 +125,74 @@ body {
 }
 
 
-#custom-intro-parent-container {
+
+
+
+.landing {
   display: flex;
   flex-direction: row;
-  /*flex-wrap: wrap;*/
+  width: 100%;
+  /* border: 2px solid black; */
+
 }
 
-.custom-intro-text {
+#landing-title {
+  display: inline;
   position: relative;
-  display: inline-block;
-  text-align: left;
   float: left;
+  width: 50%;
+  /* border: 2px solid pink; */
+  padding-left: 5%;
+}
+
+.landing-title-text {
+  text-align: left;
   color: black;
   font-family: "Montserrat";
-  font-size: 4vw;
+  font-size: calc(18pt + 3vw);
   font-weight: bolder;
-  padding-left: 0;
-  margin-bottom: 50%;
-
   -webkit-text-stroke: 1.5px black;
   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
 
 }
 
-#partial-text {
-  font-size: 8vw;
+@media (max-width: 500px) {
+  #landing-title {
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .landing-title-text {
+  }
+
+  .landing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 2px solid black; */
+
+  }
 }
 
-.custom-intro-image {
-  position: absolute;
-  display: inline-block;
-  width: 40%;
-  overflow: visible;
-  flex-direction: row;
-  right: 0;
-  top: 20%;
-
+.img-container {
+  max-width: 40%;
+  position: relative;
+  float: right;
+  min-width: 300px;
+  margin-right: 0;
 }
 
-#custom-intro-image {
-  width: 100%;
+@media (max-width: 768px) {
+  .img-container {
+    margin-left: 150px;
+    margin-top: 10%;
+  }
 }
+
+#intro-image {
+  max-width: 100%;
+}
+
 
 #services {
   clear: both;
@@ -107,7 +235,7 @@ section {
     margin-top: 0;
     margin-bottom: 60px; }
   section h3.section-subheading {
-    font-size: 24px;
+    font-size: calc(12px + 1vw);
     font-weight: 400;
     line-height: 30pt;
     text-align: left;
@@ -207,6 +335,9 @@ body {
         padding: 12px 0; } }
 
 header.masthead {
+  display: inline-block;
+  position: relative;
+  float: left;
   text-align: center;
   color: white;
   /*background-image: url("../img/headerbg.jpg");*/
@@ -255,6 +386,8 @@ header.masthead {
   text-transform: none; }
 
 #portfolio .portfolio-item {
+  border: 1px solid black;
+  background-color: white;
   right: 0;
   margin: 0 0 15px; }
   #portfolio .portfolio-item .portfolio-link {
