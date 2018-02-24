@@ -36,7 +36,7 @@
 
 
 .item-description {
-  font-size: 10pt;
+  font-size: 11pt;
   display: inline-block;
   /* position: absolute; */
   margin-left: 7%;
@@ -55,7 +55,7 @@
 }
 
  .big-space {
-   height: 60px;
+   height: 80px;
  }
 
 .custom-button-row {
@@ -67,8 +67,12 @@
 
 .custom-btn {
   display: inline-flex;
-  margin-right: 10px;
+  margin-right: 20px;
   margin-bottom: 10px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 25px;
+  padding-right: 25px;
   color: black;
   background-color: white;
   border: 1px solid black;
@@ -175,7 +179,7 @@ body {
 }
 
 .img-container {
-  max-width: 40%;
+  max-width: 600px;
   position: relative;
   float: right;
   min-width: 300px;
