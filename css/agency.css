@@ -8,7 +8,12 @@
  .w3-left, .w3-right, .w3-badge {cursor:pointer}
  .w3-badge {height:13px;width:13px;padding:0}
 
+#request-physical-copy div{
+  max-width: 500px;
 
+
+}
+#success_message{ display: none;}
 .nav-btn-container {
   text-align: center;
 }
@@ -26,20 +31,25 @@
 .item-img {
   max-height: 500px;
   max-width: 500px;
+
   height: auto;
-  width: auto;
+  width: 100%;
   display: block;
   /* position: absolute; */
   /* border: 2px solid pink; */
-  left: 0;
+
 }
 
+.item-img img {
+  width: 100%;
+}
 
 .item-description {
   font-size: 11pt;
   display: inline-block;
   /* position: absolute; */
-  margin-left: 7%;
+  /* margin-left: 7%; */
+  padding: 15px;
   position: relative;
   /* border: 2px solid red;
   background-color: white; */
@@ -59,7 +69,7 @@
  }
 
 .custom-button-row {
-  margin-top: 30%;
+  margin-top: 6%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -69,25 +79,37 @@
   display: inline-flex;
   margin-right: 20px;
   margin-bottom: 10px;
-  padding-top: 18px;
+  font-size: 8pt;
+  /* padding-top: 18px;
   padding-bottom: 18px;
   padding-left: 25px;
-  padding-right: 25px;
+  padding-right: 25px; */
+
+  padding: 2%;
   color: black;
-  background-color: white;
+  background-color: transparent;
   border: 1px solid black;
   border-radius: 0;
 }
 
+.custom-btn a {
+  text-decoration: none;
+  color: black;
+}
+.custom-btn a:hover {
+  color: inherit;
+}
 .custom-btn:hover {
-  color: white;
-  background-color: black;
+  background-color: white;
 }
 
 .panel-2-description {
   font-size: calc(12pt + 3vw);
 }
 
+.description-text {
+  font-size: 11pt;
+}
 .carousel-control-prev {
   left: -10px;
   color: black;
@@ -118,6 +140,29 @@
   .page-border {
     border: 8px gold solid;
   }
+
+  #flipthru-video {
+    height: 300px;
+  }
+
+  .custom-button-row .custom-btn {
+    display: inline-flex;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 8pt;
+    /* padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 25px;
+    padding-right: 25px; */
+
+    width: 100%;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 0;
+  }
+
+
 }
 
 body {
@@ -131,10 +176,10 @@ body {
 
 
 
-
 .landing {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   width: 100%;
   /* border: 2px solid black; */
 
@@ -142,21 +187,26 @@ body {
 
 #landing-title {
   display: inline;
+
   position: relative;
   float: left;
-  width: 50%;
+  width: 100%;
+  max-width: 700px;
   /* border: 2px solid pink; */
+  padding-top: 2%;
   padding-left: 5%;
 }
 
 .landing-title-text {
   text-align: left;
+  margin-bottom: 4%;
+
   color: black;
   font-family: "Montserrat";
   font-size: calc(18pt + 3vw);
   font-weight: bolder;
-  -webkit-text-stroke: 1.5px black;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke: 1.3px black;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
 
 }
 
@@ -164,7 +214,6 @@ body {
   #landing-title {
     margin-left: auto;
     margin-right: auto;
-
   }
   .landing-title-text {
   }
@@ -173,6 +222,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+
     /* border: 2px solid black; */
 
   }
@@ -206,7 +256,7 @@ body {
 
 body {
   overflow-x: hidden;
-  font-family: 'Vollkorn', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 p {
   line-height: 1.75; }
@@ -228,12 +278,21 @@ h6 {
   font-weight: 700;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
+h4 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  font-variant-caps: all-small-caps ;
+  color: black;
+  font-weight: 900; }
+}
+
+
 section {
   padding: 100px 0; }
   section h2.section-heading {
 
-    -webkit-text-stroke: 1.5px black;
-    -webkit-text-fill-color: gold; /* Will override color (regardless of order) */
+    -webkit-text-stroke: 1.3px black;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
 
     font-size: 40px;
     margin-top: 0;
@@ -247,15 +306,17 @@ section {
     font-style: normal;
     margin-bottom: 75px;
     text-transform: none;
-    font-family: 'Vollkorn', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 @media (min-width: 768px) {
   section {
     padding: 150px 0; } }
 
 .btn {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700; }
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  color: black;
+  font-weight: 900; }
 
 .btn-xl {
   font-size: 18px;
@@ -289,7 +350,8 @@ body {
   -webkit-tap-highlight-color: #fed136; }
 
 #mainNav {
-  background-color: transparent; }
+  background-color: transparent;
+ }
   #mainNav .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -329,7 +391,8 @@ body {
       -moz-transition: all 0.3s;
       transition: all 0.3s; }
     #mainNav .navbar-nav .nav-item .nav-link {
-      padding: 1.1em 1em !important; }
+      padding: 0em 1em !important; }
+      /* padding: 1.1em 1em !important; } */
     #mainNav.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
@@ -360,7 +423,7 @@ header.masthead {
       font-style: normal;
       line-height: 22px;
       margin-bottom: 25px;
-      font-family: 'Vollkorn', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     header.masthead .intro-text .intro-heading {
       font-size: 50px;
       font-weight: 700;
@@ -377,7 +440,7 @@ header.masthead {
       font-style: normal;
       line-height: 40px;
       margin-bottom: 25px;
-      font-family: 'Vollkorn', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     header.masthead .intro-text .intro-heading {
       font-size: 75px;
       font-weight: 700;
@@ -438,7 +501,7 @@ header.masthead {
       font-size: 16px;
       font-style: normal;
       margin: 0;
-      font-family: 'Vollkorn', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 #portfolio * {
   z-index: 2; }
@@ -464,7 +527,7 @@ header.masthead {
       font-size: 16px;
       font-style: normal;
       margin: 20px 0 30px;
-      font-family: 'Vollkorn', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     .portfolio-modal .modal-content ul.list-inline {
       margin-top: 0;
       margin-bottom: 30px; }
@@ -650,6 +713,11 @@ header.masthead {
     margin-bottom: 0;
     text-transform: none; }
   .team-member p {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    font-variant-caps: all-small-caps;
+    color: black;
+    font-weight: bolder; }
     margin-top: 0; }
 
 
@@ -676,21 +744,21 @@ section#contact {
   section#contact ::-webkit-input-placeholder {
     font-weight: 700;
     color: #ced4da;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   section#contact :-moz-placeholder {
     font-weight: 700;
     color: #ced4da;
     /* Firefox 18- */
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   section#contact ::-moz-placeholder {
     font-weight: 700;
     color: #ced4da;
     /* Firefox 19+ */
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   section#contact :-ms-input-placeholder {
     font-weight: 700;
     color: #ced4da;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 footer {
   padding: 25px 0;
